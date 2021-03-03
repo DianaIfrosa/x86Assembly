@@ -1,3 +1,4 @@
+//Enunt:Sa se determine maximul si numarul de aparitii al acestuia intr-un array.
 .data
   v: .long  1, 5, 4, 3, 5
   n: .long 5
