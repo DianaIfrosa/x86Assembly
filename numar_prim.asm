@@ -1,3 +1,5 @@
+//Enunt: Sa se verifice daca un numar dat este prim.
+
 .data
   n: .long 5
   prim: .asciz "Numarul e prim\n"
