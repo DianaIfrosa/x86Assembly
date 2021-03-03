@@ -1,3 +1,4 @@
+//Enunt: Sa se calculeze produsul scalar a 2 vectori.
 .data
    v: .long 1,2,3,4,5
    w: .long 2,2,2,2,2
