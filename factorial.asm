@@ -1,3 +1,4 @@
+//Enunt: Calculati EAX ← EAX! (EAX factorial).
 .data
     n: .long 20
     
