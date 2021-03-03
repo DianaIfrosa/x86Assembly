@@ -1,3 +1,4 @@
+//Enunt: Se da un numar intreg cu semn, sa se determine toti divizorii acestuia.
 .data 
    n: .long 165
    const: .long 0
