@@ -1,3 +1,4 @@
+//Enunt: Sa se determine cele mai mici doua elemente dintr-un array, utilizand o singura parcurgere.
 .data
      v: .long 5,13,0,13,7
      n: .long 5
