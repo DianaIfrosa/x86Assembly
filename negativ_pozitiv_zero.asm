@@ -1,3 +1,4 @@
+//Enunt: In registrul EAX avem un numar intreg. Verificati daca numarul este negativ, pozitiv, sau zero.
 .data
    n: .long 0
    negativ: .asciz "Numarul dat este negativ!\n" 
