@@ -1,5 +1,5 @@
 //Enunt: Sa se determine cel de-al n-lea termen al sirului Fibonacci, unde n este dat de la tastatura.
-Nu se garanteaza ca este un numar intreg pozitiv.
+//Nu se garanteaza ca este un numar intreg pozitiv.
 .data
     n: .long  5
     mesaj: .asciz "nu\n"
