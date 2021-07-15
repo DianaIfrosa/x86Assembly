@@ -1,8 +1,9 @@
-//Enunt: Sa se determine cel de-al n-lea termen al sirului Fibonacci, unde n este dat de la tastatura.
-//Nu se garanteaza ca este un numar intreg pozitiv.
+//Problem: Find the nth term of fibonacci sequence, where n is given.
+//         It is not necessary a positive number.
+
 .data
     n: .long  5
-    mesaj: .asciz "nu\n"
+    message: .asciz "no\n"
     
 .text
 .globl _start
@@ -12,7 +13,7 @@ _start:
   mov $1, %eax
   mov $1, %ebx
   cmp $0, n
-  jle etmesaj
+  jle etmessage
   
 
 etloop:
@@ -31,10 +32,10 @@ etloop:
   jmp etloop
   
   
-etmesaj:
+etmessage:
    mov $4, %eax
    mov $1, %ebx
-   mov $mesaj, %ecx
+   mov $message, %ecx
    mov $3, %edx
    int $0x80
   
