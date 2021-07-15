@@ -1,4 +1,4 @@
-//Enunt:Sa se determine maximul si numarul de aparitii al acestuia intr-un array.
+//Problem: Find maximum value and the number of occurrences in an array.
 .data
   v: .long  1, 5, 4, 3, 5
   n: .long 5
@@ -9,23 +9,25 @@
 _start:
   mov $0,%ecx
   lea v,%edi
-  //setez maximul ca fiind primul element 
+  
+  //max is the first element of the array 
+  
   mov $1,%ebx
   mov (%edi, %ecx, 4), %eax
-  //eax-maximul, ebx-nr de aparitii
   
-  //plec de la 1 ca sa nu numar primul element de 2 ori
+  //eax-max, ebx-frequency
+  //start from 1 to avoid counting the first element twice
+  
   mov $1, %ecx
-  
   
 etloop:
    
    cmp %ecx,n
    je etexit
-   //daca am gasit un nr mai mare, actualizez eax,ebx
+   //found a bigger number, update eax and ebx
    cmp (%edi, %ecx, 4),%eax
    jl  etmodify
-   //daca am gasit iar maximul curent, actualizez ebx
+   //found the current max, update ebx
    cmp (%edi, %ecx, 4),%eax
    je etmodify2
    
