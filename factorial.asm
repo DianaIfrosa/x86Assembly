@@ -1,4 +1,5 @@
-//Enunt: Calculati EAX ← EAX! (EAX factorial).
+//Problem: Calculate EAX ← EAX! (EAX factorial).
+
 .data
     n: .long 20
     
@@ -9,11 +10,13 @@
 _start:
 
    mov n, %eax
-   //%eax=n, %ebx=limita superioara 
+   //%eax=n, %ebx=superior limit
    mov %eax, %ebx
-   //in %eax pastrez produsul
+   
+   //in %eax i save the product
    mov $1, %eax
-   //contorul
+   
+   //counter
    mov $1, %ecx
    
 
