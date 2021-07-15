@@ -1,4 +1,5 @@
-//Enunt: Sa se calculeze produsul scalar a 2 vectori.
+//Problem:  Find the scalar product of 2 arrays.
+
 .data
    v: .long 1,2,3,4,5
    w: .long 2,2,2,2,2
@@ -10,9 +11,9 @@
 _start:
    lea v, %edi 
    lea w, %esi
-   mov $0, %ecx # contor
-   mov $0, %ebx # suma finala
-   mov $0, %eax # produsele intermediare
+   mov $0, %ecx # counter
+   mov $0, %ebx # final sum
+   mov $0, %eax # intermediate results
    
 etloop:
    cmp n, %ecx
@@ -26,10 +27,8 @@ etloop:
   
   add $1, %ecx
   
-  
   jmp etloop
   
- 
 etexit:
   mov $1, %eax
   mov $0, %ebx
