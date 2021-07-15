@@ -1,4 +1,4 @@
-//Enunt: Se da un numar intreg cu semn, sa se determine toti divizorii acestuia.
+//Problem: Find all divisors of a natural number n.
 .data 
    n: .long 165
    const: .long 0
@@ -9,19 +9,12 @@
 _start:
    mov n, %eax
    mov $0, %ecx
-   //cmp $0, %eax
-   jmp etdivizori 
-
-//etsemn:
-    // mov $-1, %ebx
-    // imul %ebx
-     //jmp etdivizori
-     
-     
-etgasit:
+   jmp etdivisors 
+        
+etfound:
    mov %ecx, %ebx   
      
-etdivizori:
+etdivisors:
 
   mov n, %eax
  
@@ -32,9 +25,9 @@ etdivizori:
   mov $0, %edx
   div %ecx
   cmp %edx, const
-  je etgasit
+  je etfound
   
-  jmp etdivizori
+  jmp etdivisors
   
 etexit:
  mov $1, %eax
