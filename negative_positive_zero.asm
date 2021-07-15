@@ -1,9 +1,9 @@
-//Enunt: In registrul EAX avem un numar intreg. Verificati daca numarul este negativ, pozitiv, sau zero.
+//Problem: In  EAX register we have an integer. Verify if the number is negative, positive or zero.
 .data
    n: .long 0
-   negativ: .asciz "Numarul dat este negativ!\n" 
-   pozitiv: .asciz "Numarul dat este pozitiv!\n" 
-   zero: .asciz "Numarul dat este zero!\n" 
+   negative: .asciz "The number is negative!\n" 
+   positive: .asciz "The number is positive!\n" 
+   zero: .asciz "The number is zero!\n" 
    
 .text
 .globl _start
@@ -11,30 +11,30 @@
 _start:
    cmp $0, n
    je etzero
-   jl etnegativ
-   jg etpozitiv
+   jl etnegative
+   jg etpositive
    
 etzero:
    mov $4, %eax
    mov $1, %ebx
    mov $zero, %ecx
-   mov $23, %edx
+   mov $20, %edx
    int $0x80
    jmp etexit 
    
-etnegativ:
+etnegative:
    mov $4, %eax
    mov $1, %ebx
-   mov $negativ, %ecx
-   mov $26, %edx
+   mov $negative, %ecx
+   mov $24, %edx
    int $0x80  
    jmp etexit
    
-etpozitiv:
+etpositive:
    mov $4, %eax
    mov $1, %ebx
-   mov $pozitiv, %ecx
-   mov $26, %edx
+   mov $positive, %ecx
+   mov $24, %edx
    int $0x80
    
 etexit:
