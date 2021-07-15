@@ -1,4 +1,4 @@
-//Enunt: Sa se determine cele mai mici doua elemente dintr-un array, utilizand o singura parcurgere.
+//Problem: Find the 2 smallest numbers in an array, in one traversal.
 .data
      v: .long 5,13,0,13,7
      n: .long 5
@@ -19,21 +19,21 @@ etloop:
  jge etexit
  
  cmp (%edi , %ecx, 4), %ebx
- jg etschimba1
+ jg etchange1
  cmp (%edi , %ecx, 4), %edx
- jg etschimba2
+ jg etchange2
  
  add $1, %ecx
  jmp etloop
   
 
-etschimba2:
+etchange2:
    mov (%edi , %ecx, 4), %edx
    add $1, %ecx
    jmp etloop
    
 
-etschimba1:
+etchange1:
    mov %ebx, %edx
    mov (%edi , %ecx, 4), %ebx
    add $1, %ecx
